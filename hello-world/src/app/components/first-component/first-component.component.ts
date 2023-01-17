@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-first-component',
@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./first-component.component.css']
 })
 export class FirstComponentComponent {
-  name: string = "Rafael";
-  age: number = 21;
-  numbers: number[] = [1, 2, 3];
+  @Input() name: string = "";
+  @Input() userData: {
+    name: string;
+    age: number;
+  } = {
+    name: "",
+    age: 0,
+  };
 }
