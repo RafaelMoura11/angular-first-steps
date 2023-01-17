@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello-world';
 
+  ngStyle: number = 9
+
   userData: {
     name: string;
     age: number;

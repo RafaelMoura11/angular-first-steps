@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./directive.component.css']
 })
 export class DirectiveComponent {
-
+  size: string = '10px'
+  classes: string[] = ["first-class", "second-class"]
 }
