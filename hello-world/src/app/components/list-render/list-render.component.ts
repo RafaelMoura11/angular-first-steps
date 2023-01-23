@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import Animal from '../../Animal';
 
-import ListService from '../../'
+import { ListService } from '../../services/list.service'
 
 @Component({
   selector: 'app-list-render',
@@ -10,7 +10,7 @@ import ListService from '../../'
   styleUrls: ['./list-render.component.css']
 })
 export class ListRenderComponent {
-  constructor(private listService: ListService)
+  constructor(private listService: ListService) {}
 
   animals: Animal[] = [
     {
