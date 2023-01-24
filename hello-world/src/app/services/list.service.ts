@@ -8,14 +8,18 @@ import Animal from '../Animal';
 })
 export class ListService {
   private apiUrl = "http://localhost:3000/animals";
-
+  
   constructor(private http: HttpClient) { }
-
+  
   getAll(): Observable<Animal[]> {
     return this.http.get<Animal[]>(this.apiUrl);
   }
-
+  
   remove(animal: Animal) {
     return this.http.delete(`${this.apiUrl}/${animal.id}`)
+  }
+
+  getOne(id: number): Observable<Animal> {
+    return this.http.get<Animal>(`${this.apiUrl}/${id}`)
   }
 }
